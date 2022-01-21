@@ -83,7 +83,7 @@ const EditProduct = {
     afterRender(id) {
         const $ = document.querySelector.bind(document);
         const formAdd = $("#form-edit");
-        formAdd.addEventListener("click", (e) => {
+        formAdd.onsubmit = (e) => {
             e.preventDefault();
             update({
                     id: id,
@@ -96,7 +96,7 @@ const EditProduct = {
                 .then(() => {
                     window.location.href = "/admin/products";
                 })
-        });
+        };
     },
 };
 export default EditProduct;
