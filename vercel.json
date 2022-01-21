@@ -1,0 +1,15 @@
+{
+    "routes": [{
+            "src": "/",
+            "dest": "/"
+        },
+        {
+            "src": "/admin/dashboard",
+            "dest": "/"
+        },
+        {
+            "src": "/admin/news/(.*)/edit",
+            "dest": "/"
+        }
+    ]
+}
