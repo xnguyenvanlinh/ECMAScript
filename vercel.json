@@ -4,11 +4,24 @@
             "dest": "/"
         },
         {
+            "src": "/admin",
+            "dest": "/"
+        },
+        {
             "src": "/admin/dashboard",
             "dest": "/"
         },
         {
-            "src": "/admin/news/(.*)/edit",
+            "src": "/admin/products",
+            "dest": "/"
+        },
+        {
+            "src": "/admin/products/(.*)",
+            "dest": "/"
+        },
+
+        {
+            "src": "/admin/product/(.*)/edit",
             "dest": "/"
         }
     ]
