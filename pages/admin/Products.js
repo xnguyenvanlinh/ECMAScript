@@ -9,7 +9,7 @@ const Products = {
             ${NavAdmin.render()}
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div class="text-right">
-                    <a href="/admin/products/add" class="inline-flex my-[20px] justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <a href="/admin/products/add" class="inline-flex my-[20px] justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         Thêm sản phẩm
                     </a>
                 </div>

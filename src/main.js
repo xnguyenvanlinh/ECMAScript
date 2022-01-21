@@ -16,8 +16,6 @@ router.on({
     "/": () => {
         print(HomePage);
     },
-    "/about": () => {},
-    "/tuyendung": () => {},
     "/admin": () => {
         print(NavAdmin);
     },
