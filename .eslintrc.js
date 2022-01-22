@@ -16,11 +16,5 @@ module.exports = {
         indent: ["error", 4],
         "linebreak-style": 0,
         "eol-last": ["error", "never"],
-        "space-before-function-paren": ["error", {
-            anonymous: "always",
-            named: "always",
-            asyncArrow: "always",
-        }],
-    },
-
+    }
 };

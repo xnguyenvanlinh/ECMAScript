@@ -62,7 +62,7 @@ const EditProduct = {
                                 </label>
                             <div class="mt-1 flex items-center">
                                 <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                                    <img src="${data.img}" />
+                                    <img src="${data.img}" id="preview" />
                                 </span>
                                 <label for="image" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                     Chọn ảnh
@@ -83,20 +83,26 @@ const EditProduct = {
     afterRender(id) {
         const $ = document.querySelector.bind(document);
         const formAdd = $("#form-edit");
-        formAdd.onsubmit = (e) => {
+        image.onchange = evt => {
+            const [file] = image.files
+            if (file) {
+                preview.src = URL.createObjectURL(file)
+            }
+        }
+        formAdd.addEventListener('submit', (e) => {
             e.preventDefault();
             update({
-                    id: id,
-                    "name": $("#name").value,
-                    "desc": $("#desc").value,
-                    "quantity": $("#quantity").value,
-                    "img": $("#image").value,
-                    "price": $("#price").value,
+                    id,
+                    name: $("#name").value,
+                    desc: $("#desc").value,
+                    quantity: $("#quantity").value,
+                    img: $("#image").value,
+                    price: $("#price").value,
                 })
                 .then(() => {
                     window.location.href = "/admin/products";
                 })
-        };
+        })
     },
 };
 export default EditProduct;

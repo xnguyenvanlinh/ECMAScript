@@ -12,6 +12,7 @@ const print = async(content, id) => {
         content.afterRender(id);
     }
 };
+
 router.on({
     "/": () => {
         print(HomePage);

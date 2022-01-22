@@ -17,6 +17,9 @@ const Products = {
                     <thead class="bg-gray-50">
                     <tr>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                Sản phẩm
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                             Sản phẩm
                         </th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -35,8 +38,11 @@ const Products = {
                     </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        ${data.map((product) => /* html */ `
+                        ${data.map((product,index) => /* html */ `
                         <tr>
+                            <td class="py-4 text-center font-bold">
+                             ${index+1}
+                            </td>
                             <td class="py-4 whitespace-nowrap">
                                 <div class="flex items-center">
                                     <div class="flex-shrink-0 h-10 w-10">
@@ -66,7 +72,7 @@ const Products = {
                                 <a href="/admin/product/${product.id}/edit" class="text-indigo-600 hover:text-indigo-900 px-2">
                                     Sửa
                                 </a>
-                                <button data-id="${product.id}" class="btn-delete">
+                                <button data-id="${product.id}" class="btn-delete text-red-600 font-semibold">
                                     Xóa
                                 </button>
                             </td>
