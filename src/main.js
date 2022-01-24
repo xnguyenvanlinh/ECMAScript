@@ -1,9 +1,9 @@
 import Navigo from "navigo";
-import Addproduct from "../pages/admin/AddProduct";
-import EditProduct from "../pages/admin/EditProduct";
-import NavAdmin from "../pages/admin/NavAdmin";
-import Products from "../pages/admin/Products";
-import HomePage from "../pages/HomePage";
+import Addproduct from "./pages/admin/AddProduct";
+import EditProduct from "./pages/admin/EditProduct";
+import NavAdmin from "./pages/admin/NavAdmin";
+import Products from "./pages/admin/Products";
+import HomePage from "./pages/HomePage";
 const router = new Navigo("/", { hash: true, linksSelector: "a" });
 const $ = document.querySelector.bind(document);
 const print = async(content, id) => {

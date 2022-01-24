@@ -1,4 +1,4 @@
-import { getAll, remove } from "../../src/api/post";
+import { getAll, remove } from "../../api/post";
 import NavAdmin from "./NavAdmin";
 
 /* eslint-disable indent */

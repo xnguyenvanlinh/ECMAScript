@@ -1,4 +1,4 @@
-import { add } from "../../src/api/post";
+import { add } from "../../api/post";
 import NavAdmin from "./NavAdmin";
 const AddProduct = {
     render() {

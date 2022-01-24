@@ -1,7 +1,11 @@
 module.exports = {
-    content: ["*.html", "./src/**/*.{html,js}", "./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+    content: ["*.html", "./src/**/*.{html,js}"],
     theme: {
-        extend: {},
+        extend: {
+            // backgroundImage: {
+            //     'bg-header': "url('http://prolex.themetags.com/img/hero-bg-2.jpg')",
+            // }
+        },
     },
     plugins: [],
 };

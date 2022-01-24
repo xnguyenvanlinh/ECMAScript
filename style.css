@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.background-img {
+    background: url('http://prolex.themetags.com/img/hero-bg-2.jpg')no-repeat center center / cover;
+}
+
+.bg-transparent.affix {
+    background-image: linear-gradient(to right, rgb(1, 2, 12), rgb(2, 2, 10), rgb(15, 15, 16), rgb(6, 0, 14), rgb(14, 3, 23)) !important;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.background-img::before {
+    position: absolute;
+    content: '';
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80));
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
