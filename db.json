@@ -1,0 +1,99 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "đồng hồ nam",
+      "introduce": "“Cùng với sự phát triển không ngừng của thời trang thế giới, rất nhiều thương hiệu cho ra đời những mẫu đồng hồ nam chính hãng đa dạng về phong cách, kiểu dáng, màu sắc, kích cỡ… Một chiếc đồng hồ nam cao cấp chính hãng khắc họa một giá trị đích thực khi nói đến phụ kiện xa xỉ dành cho phái mạnh. Hiện nay, đồng hồ là phụ kiện thời trang thiết yếu đối với những người đàn ông hiện đại. Trên cổ tay của những người đàn ông thành đạt luôn dành vị trí cho một chiếc đồng hồ nam cao cấp.”",
+      "image": "https://cdn3.dhht.vn/wp-content/uploads/2019/02/dong-ho-nam-banner.jpg"
+    },
+    {
+      "id": "2",
+      "name": "đồng hồ nữ",
+      "introduce": "“Phụ nữ luôn có những yêu cầu cao về phong cách trang phục, phụ kiện bên ngoài của họ. Đặc biệt khi nói về đồng hồ nữ cao cấp thì phái đẹp luôn yêu cầu phải có sự hài hòa về kiểu dáng, màu sắc, sự khéo léo và đặc biệt phải có độ chính xác cao, chất lượng tốt. Đối với những phụ nữ hiện đại thì một chiếc đồng hồ nữ chính hãng không thể thiếu trên cổ tayọ, không chỉ đơn giản là để xem giờ mà nhằm tôn vinh vẻ đẹp của họ mà thôi. “",
+      "image": "https://cdn3.dhht.vn/wp-content/uploads/2019/02/dong-ho-nu-1.jpg"
+    },
+    {
+      "id": "3",
+      "name": "đồng hồ đôi (cặp)",
+      "introduce": "” Đồng hồ đôi đẹp là sự “chắp cánh” tốt nhất cho tình yêu của hai bạn để bước thêm một nấc thang mới. Đồng hồ đôi (cặp) còn là món quà hết sức ý nghĩa và là vật có thể lưu giữ được những khoảng khắc thời gian lãng mạn trong tình yêu của hai bạn. Vậy thì bạn còn đợi chờ gì nữa, hãy lựa chọn ngay đồng hồ cặp chính hãng đẹp nhất cho một nửa của mình. Bạn sẽ thấy sức mạnh diệu kì đến từ món quà tặng tuyệt vời này, nó không chỉ nằm ở giá trị vật chất mà đồng hồ cặp (đôi) còn mang những giá trị tinh thần hết sức ý nghĩa mà sẽ làm tình yêu đôi lứa bùng cháy dữ dội … “",
+      "image": "https://cdn3.dhht.vn/wp-content/uploads/2019/03/banner-doi.jpg"
+    },
+    {
+      "id": "4",
+      "name": "đồng hồ trẻ em",
+      "introduce": "“Ngoài giá thành thì những chất lượng, mức độ an toàn, tiện ích đi kèm,… luôn là những yếu tố quan trọng để các bậc cha mẹ quyết định chọn mua đồng hồ trẻ em cho con trẻ. Đồng hồ trẻ em chính hãng càng nhiều màu sắc, càng nhiều tính năng sẽ kích thích hệ tư duy và nhạy bén hơn trong cách xử lý tình huống. Một số thương hiệu đồng hồ trẻ em được khuyên dùng hiện nay: Casio, G-Shock, Baby-G,…”",
+      "image": "https://cdn3.dhht.vn/wp-content/uploads/2021/10/banner-dong-ho-tre-em-chinh-hang.jpg"
+    }
+  ],
+  "products": [
+    {
+      "name": "Casio AE-1200WHD-1AVDF – Nam – Kính Nhựa – Quartz (Pin) – Dây Kim Loại",
+      "price": "1308000",
+      "quantity": "76",
+      "desc": "Đồng hồ nam Casio AE1200WHD có mặt đồng hồ vuông to với phong cách thể thao, mặt số điện tử với những tính năng hiện đại tiện dụng, kết hợp với dây đeo bằng kim loại đem lại vẻ mạnh mẽ cá tính dành cho phái nam",
+      "images": [
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh1.webp?alt=media&token=122b2985-59da-4990-8dbe-6a0418dc41bd",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh2.webp?alt=media&token=99832bcf-8f9b-42ad-b142-5c7c6448f960",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh3.webp?alt=media&token=3c8b0a4b-be30-4309-b6c4-f348abe7055d",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh4.webp?alt=media&token=5e138f97-a8b8-48bb-9059-3f28b60c1532",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh5.webp?alt=media&token=de903808-9fda-4b5c-9086-ffe753ca9903",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh6.webp?alt=media&token=79933a75-2169-4f70-8810-782e2d5efc55",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh7.webp?alt=media&token=d34efa30-7c6c-4910-bec0-746cb8dab9e7",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh8.webp?alt=media&token=f9cd498f-ba5a-49df-b556-213d0267749a",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp1-anh9.webp?alt=media&token=386d456e-4986-4561-9506-cb970c43b3f6"
+      ],
+      "cateId": "1",
+      "id": "9gK1wzJ"
+    },
+    {
+      "name": "Casio MTP-1302D-7A1VDF – Nam – Quartz (Pin) – Dây Kim Loại",
+      "price": "1283000",
+      "quantity": "235",
+      "desc": "Đồng hồ Casio MTP-1302D-7A1VDF có kiểu dáng truyền thống với mặt số tròn, niềng được tạo khía nổi bật quanh nền trắng mặt số, kim chỉ và vạch số được phủ bạc tạo phản quang nổi bật trên nền số",
+      "images": [
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp2-anh1.webp?alt=media&token=47f64ab1-cd9e-4978-a168-784f9edcd419",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp2-anh2.webp?alt=media&token=e3157836-3969-43a8-a379-5291aad698ed",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp2-anh3.webp?alt=media&token=ab437aba-b795-4adc-95ad-f3ed0a054cfc",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp2-anh4.webp?alt=media&token=52dd043c-aec5-4c38-8d9b-62b6c553087a",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp2-anh5.webp?alt=media&token=a87d06cf-a378-4079-9daa-403fb4c128f7",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp2-anh6.webp?alt=media&token=df66621f-69f6-4b8f-8699-c393505121ab"
+      ],
+      "cateId": "1",
+      "id": "1EgnfzX"
+    },
+    {
+      "name": "Citizen AK5003-05A – Nam – Quartz (Pin) – Dây Da",
+      "price": "3740000",
+      "quantity": "88",
+      "desc": "Mẫu Citizen AK5003-05A phiên bản tính năng lịch trăng sao nổi bật trên nền mặt số size 42mm với họa tiết trải tia, vỏ máy tone vàng hồng thời trang sang trọng",
+      "images": [
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh1.webp?alt=media&token=277f9e44-4a18-41bd-8fa9-9f4349856cb1",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh2.webp?alt=media&token=3cde57bb-0ad9-4b10-8207-dac8d9080f2e",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh3.webp?alt=media&token=9a4d278f-6282-4728-aa31-15f780bac158",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh4.webp?alt=media&token=6e20e8f0-fb28-4f8e-87eb-8cb15f25fbed",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh5.webp?alt=media&token=69660602-0a99-4d01-9721-b51db136feaa",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh6.webp?alt=media&token=13318128-3574-4b35-b230-fb9d823155d0",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh7.webp?alt=media&token=49413586-74a3-4066-ace3-4b0546013b08",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp3-anh8.webp?alt=media&token=f3257833-695e-4f89-bac1-56120ced71ec"
+      ],
+      "cateId": "1",
+      "id": "1y820E0"
+    },
+    {
+      "name": "Doxa D173TCM – Nam – Kính Sapphire – Automatic (Tự Động) – Dây Kim Loại",
+      "price": "3740000",
+      "quantity": "12",
+      "desc": "Mẫu Doxa nam D173TCM khoác lên phong cách đẳng cấp khi mặt số với thiết kế tinh xảo đính kèm các viên kim cương nổi bật trên nền kính Sapphire thời trang sang trọng phối cùng mẫu dây đeo demi",
+      "images": [
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp4-anh1.webp?alt=media&token=639a6ed9-bc8e-483e-b76a-7ec1f4dfedc6",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp4-anh2.webp?alt=media&token=16b92f38-3ffe-4d4d-8361-981e1e330923",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp4-anh3.webp?alt=media&token=24bf8d13-0225-443a-a9b8-a06084eacb3d",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp4-anh4.webp?alt=media&token=0170e0ba-4dde-4fe2-bbb9-0577db68f3ad",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp4-anh5.webp?alt=media&token=621e4cce-1286-4c67-a7a2-33c0db12ead8",
+        "https://firebasestorage.googleapis.com/v0/b/assignment-6a191.appspot.com/o/images%2Fsp4-anh6.webp?alt=media&token=91837bfc-795e-4638-b8e8-b0a8f3099e90"
+      ],
+      "cateId": "1",
+      "id": "4xUHf4i"
+    }
+  ]
+}
