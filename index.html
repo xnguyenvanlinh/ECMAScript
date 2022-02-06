@@ -6,109 +6,13 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <div id="root">
-        <div class="bg-transparent">
-            <header class="bg-transparent fixed-top py-3" id="header">
-                <nav class="flex justify-between w-[1140px] mx-auto items-center">
-                    <div>
-                        <a href=""><img src="http://prolex.themetags.com/img/logo-white-red.png" alt=""></a>
-                    </div>
-                    <ul class="flex px-2 ">
-                        <li class=" px-2 text-[#707070] py-[15px] ml-[15px] text-[15px] font-semibold hover:text-white cursor-pointer"><a href="">Home</a></li>
-                        <li class=" px-2 text-[#707070] py-[15px] ml-[15px] text-[15px] font-semibold hover:text-white cursor-pointer"><a href="">Features</a></li>
-                        <li class=" px-2 text-[#707070] py-[15px] ml-[15px] text-[15px] font-semibold hover:text-white cursor-pointer"><a href="">Specs</a></li>
-                        <li class=" px-2 text-[#707070] py-[15px] ml-[15px] text-[15px] font-semibold hover:text-white cursor-pointer"><a href="">Product</a></li>
-                        <li class=" px-2 text-[#707070] py-[15px] ml-[15px] text-[15px] font-semibold hover:text-white cursor-pointer"><a href="">Faq</a></li>
-                        <li class=" px-2 text-[#707070] py-[15px] ml-[15px] text-[15px] font-semibold hover:text-white cursor-pointer"><a href="">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <main>
-                <section class="background-img relative block w-full pt-[100px] pb-[160px]">
-                    <div class="flex items-center w-[1140px] mx-auto justify-between">
-                        <div class="w-[540px] z-10">
-                            <h1 class="text-white font-medium text-[42px] leading-[60px] mb-[25px]">
-                                <span class="font-bold text-[#ed1c24]">Colorful</span> Screen, Smart interactions
-                            </h1>
-                            <p class="text-white font-medium text-[19px] mb-5">Our design projects are fresh and simple and will benefit your business greatly. Learn more about our work!</p>
-                            <ul class="py-4">
-                                <li class="text-center text-white inline-block text-[13px] w-[120px]">
-                                    <div class="w-[55px] h-[55px] bg-white grid place-items-center rounded-[50%] mx-auto mb-3">
-                                        <span class="text-[#ed1c24]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                        </span class="text-[#ed1c24]">
-                                    </div>
-                                    Location tracker
-                                </li>
-                                <li class="text-center text-white inline-block text-[13px] w-[120px]">
-                                    <div class="w-[55px] h-[55px] bg-white grid place-items-center rounded-[50%] mx-auto mb-3">
-                                        <span class="text-[#ed1c24]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                        </span class="text-[#ed1c24]">
-                                    </div>
-                                    Location tracker
-                                </li>
-                                <li class="text-center text-white inline-block text-[13px] w-[120px]">
-                                    <div class="w-[55px] h-[55px] bg-white grid place-items-center rounded-[50%] mx-auto mb-3">
-                                        <span class="text-[#ed1c24]">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                        </span class="text-[#ed1c24]">
-                                    </div>
-                                    Location tracker
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=" z-10">
-                            <div class="block">
-                                <img src="http://prolex.themetags.com/img/watch.png" style="width: 445px;height: 362px;">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2 class="text-center text-[36px] w-[635px] mx-auto font-semibold">
-                        Core features for <span class="text-[#ed1c24]">Smart</span> people
-                                        <p class="text-[19px] text-[#707070] font-normal">Following reasons show advantages of adding ProLex to your lead pages, demos and checkouts</p>
-                                        </h2>
-                                        <img src="https:/picsum.photos/width/height" alt="" />
-                </section>
-                <section>
-                    <div class="single-promo single-promo-hover single-promo-1 rounded text-center white-bg py-4 px-3 h-100">
-                        <div class="circle-icon mb-2">
-                            <span class="ti-vector"></span>
-                        </div>
-                        <h5>Clean Design</h5>
-                        <p class="mb-0">Increase sales by showing true dynamics of your website.</p>
-                    </div>
-                </section>
-            </main>
-            </div>
-            </div>
-            <script>
-                document.onscroll = () => {
-                    const scrollTop = window.scrollY || document.documentElement.scrollTop
-                    if (scrollTop > 10) {
-                        document.getElementById('header').classList.add('affix');
-                    } else {
-                        document.getElementById('header').classList.remove('affix');
-                    }
-                }
-            </script>
-            <!-- <script type="module" src="./src/main.js"></script> -->
+    </div>
+    <script type="module" src="./src/main.js"></script>
 </body>
 
 </html>
