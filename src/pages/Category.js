@@ -9,12 +9,7 @@ const Categories = {
         async render(id) {
             const category = (await getCate(id)).data;
             console.log(typeof id)
-            const { data } = await getAll();
-            const product = await data.filter((product) => {
-                product.cateId == id;
-                console.log(product.cateId)
-            });
-            console.log(product);
+            const products = (await getAll()).data
             return /* html */ `
             ${Header.render()}
             <main>
