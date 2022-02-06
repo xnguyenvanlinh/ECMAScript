@@ -1,6 +1,6 @@
 import Navigo from 'navigo';
 import DetailProduct from './pages/DetailProduct';
-import Addproduct from './pages/admin/AddProduct';
+import Addproduct from './pages/admin/AddProduct.js';
 import EditProduct from './pages/admin/EditProduct';
 import NavAdmin from './pages/admin/NavAdmin';
 import Products from './pages/admin/Products';
