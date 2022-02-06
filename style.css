@@ -1,20 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+* {
+    scroll-behavior: smooth;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #0099ff 0%, #ff99cc 100%);
+}
+
 .background-img {
     background: url('http://prolex.themetags.com/img/hero-bg-2.jpg')no-repeat center center / cover;
 }
 
-.bg-transparent.affix {
+header {
     background-image: linear-gradient(to right, rgb(1, 2, 12), rgb(2, 2, 10), rgb(15, 15, 16), rgb(6, 0, 14), rgb(14, 3, 23)) !important;
-}
-
-.fixed-top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 9999;
 }
 
 .background-img::before {
@@ -25,4 +43,162 @@
     height: 100%;
     top: 0;
     left: 0;
+}
+
+:root {
+    --columns: 4;
+    --spacing: 30px;
+}
+
+.title-cate::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    left: 0;
+    top: 49%;
+    z-index: -1;
+}
+
+.product {
+    width: calc(calc(100%/var(--columns)) - var(--spacing));
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.product-cate {
+    width: calc(33% - 30px);
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 30%;
+    border: 1px solid #ebebeb;
+    padding-block: 5px;
+    background: white;
+    display: none;
+}
+
+.product:hover .arrow-left,
+.product:hover .arrow-right {
+    display: block;
+}
+
+.product-cate:hover .arrow-left,
+.product-cate:hover .arrow-right {
+    display: block;
+}
+
+.product-cate-change {
+    border: 1px solid transparent;
+    width: 298px;
+    height: 298px;
+}
+
+.product-cate-change:hover {
+    border-color: #ebebeb;
+}
+
+.product-cate-change button.arrow-left,
+.product-cate-change button.arrow-right {
+    position: absolute;
+    top: 50%;
+    display: none;
+}
+
+.product-cate-change:hover button.arrow-left,
+.product-cate-change:hover button.arrow-right {
+    display: block;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+    background-color: rgba(245, 81, 81, 0.8);
+    border-color: transparent;
+}
+
+.arrow-right:hover svg,
+.arrow-left:hover svg {
+    color: white;
+}
+
+.arrow-left {
+    left: 0;
+    border-left: none;
+}
+
+.arrow-right {
+    right: 0;
+    border-right: none;
+}
+
+.product:hover {
+    border-color: #ebebeb;
+}
+
+.product-cate:hover {
+    border-color: #ebebeb;
+}
+
+.count-image {
+    display: none;
+}
+
+.product:hover .count-image {
+    display: block;
+}
+
+.product-cate:hover .count-image {
+    display: block;
+}
+
+.brand p a img {
+    filter: grayscale(100%)
+}
+
+.brand p a img:hover {
+    filter: grayscale(0);
+}
+
+.post-news {
+    padding: 20px 10px 15px 25px;
+}
+
+blockquote {
+    background: #fcfcfc url('https://donghohaitrieu.com/wp-content/themes/legenda/images/quote.png') no-repeat 10px 10px;
+    min-height: 50px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.hidden-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.view-grid,
+.view-list-item {
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+#view-grid:checked+.view-grid {
+    border: 1px solid rgb(233, 59, 59);
+}
+
+#view-grid:checked+.view-grid svg {
+    color: rgb(233, 59, 59);
+}
+
+#view-list-item:checked+.view-list-item svg {
+    color: rgb(233, 59, 59);
+}
+
+#view-list-item:checked+.view-list-item {
+    border: 1px solid rgb(233, 59, 59);
 }
