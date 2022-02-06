@@ -1,6 +1,6 @@
-import { getAll, remove } from "../../api/post";
+import { getAll, remove } from "../../api/product";
+import { reRender } from "../../untils/until";
 import NavAdmin from "./NavAdmin";
-
 /* eslint-disable indent */
 const Products = {
         async render() {
@@ -39,44 +39,44 @@ const Products = {
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         ${data.map((product,index) => /* html */ `
-                        <tr>
-                            <td class="py-4 text-center font-bold">
-                             ${index+1}
-                            </td>
-                            <td class="py-4 whitespace-nowrap">
-                                <div class="flex items-center">
-                                    <div class="flex-shrink-0 h-10 w-10">
-                                        <img class="h-10 w-10 rounded-full" src="${product.img}" alt="">
-                                    </div>
-                                    <div class="ml-4">
-                                        <div class="text-sm font-medium text-gray-900">
-                                            ${product.name}
+                            <tr>
+                                <td class="py-4 text-center font-bold">
+                                ${index+1}
+                                </td>
+                                <td class="py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img class="h-10 w-10 rounded-full" src="${product.images[0]}" alt="">
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">
+                                                ${product.name}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td class="py-4 m-w-[200px]">
-                                <div class="text-sm text-gray-500 ">
-                                    ${product.desc}
-                                </div>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                    ${product.quantity}
-                                </span>
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                ${product.price} $
-                            </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                <a href="/admin/product/${product.id}/edit" class="text-indigo-600 hover:text-indigo-900 px-2">
-                                    Sửa
-                                </a>
-                                <button data-id="${product.id}" class="btn-delete text-red-600 font-semibold">
-                                    Xóa
-                                </button>
-                            </td>
-                        </tr>
+                                </td>
+                                <td class="py-4 m-w-[200px]">
+                                    <div class="text-sm text-gray-500 ">
+                                        ${product.desc}
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        ${product.quantity}
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    ${product.price} $
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                    <a href="/admin/product/${product.id}/edit" class="text-indigo-600 hover:text-indigo-900 px-2">
+                                        Sửa
+                                    </a>
+                                    <button data-id="${product.id}" class="btn-delete text-red-600 font-semibold">
+                                        Xóa
+                                    </button>
+                                </td>
+                            </tr>
                         `).join("")}
                     </tbody>
                 </table>
@@ -93,8 +93,7 @@ const Products = {
                 if (confirm) {
                     remove(id)
                         .then(() => {
-                            // eslint-disable-next-line no-restricted-globals
-                            location.reload();
+                           reRender(Products,'#root')
                         });
                 }
             });
