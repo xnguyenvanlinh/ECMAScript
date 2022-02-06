@@ -1,4 +1,4 @@
-import {get, update } from "../../src/api/post";
+import {get, update } from "../../api/product";
 import NavAdmin from "./NavAdmin";
 
 const EditProduct = {
