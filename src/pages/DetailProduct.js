@@ -2,6 +2,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import { formatter, $ } from '../untils/until';
 import {get } from '../api/product';
+import { addToCart } from '../untils/addtocart';
 /* eslint-disable indent */
 const DetailProduct = {
     async render(id) {
@@ -47,11 +48,11 @@ const DetailProduct = {
                             <form class="flex items-center my-3">
                                 <label for="">Số lượng</label>
                                 <div class="cursor-pointer value-button mx-5 py-1 px-3 bg-[#fb3200] text-white font-bold" id="decrease" value="Decrease Value">-</div>
-                                <input type="number" id="number" value="0" class="border-none outline-none w-[40px]" />
+                                <input type="number" id="number" value="1" class="border-none outline-none w-[40px]" />
                                 <div class="cursor-pointer value-button mr-5 py-1 px-3 bg-[#00aefd] text-white font-bold" id="increase" value="Increase Value">+</div>
                             </form>
                         </div>
-                        <button class="px-8 py-4 mt-4 w-full bg-[#990000] text-white font-semibold hover:underline">THÊM VÀO GIỎ</button>
+                        <button id="addToCart" class="px-8 py-4 mt-4 w-full bg-[#990000] text-white font-semibold hover:underline">THÊM VÀO GIỎ</button>
                     </div>
                     <div>
                         <div class="border-2 border-double">
@@ -148,8 +149,12 @@ const DetailProduct = {
             ${Footer.render()}
         `;
     },
-    afterRender() {
+    afterRender(id) {
         Footer.afterRender();
+        $("#addToCart").addEventListener('click', async() => {
+            const { data } = await get(id)
+            addToCart({...data, quantity: $("#number").value })
+        })
         const increase = $("#increase")
         const decrease = $("#decrease")
         increase.addEventListener('click', () => {

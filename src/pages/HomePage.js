@@ -1,5 +1,5 @@
 import Header from '../components/Header/Header';
-import { formatter } from '../untils/until';
+import { formatter, nextImage } from '../untils/until';
 import Footer from '../components/Footer/Footer';
 import { getAll } from '../api/product';
 /* eslint-disable indent */
@@ -153,7 +153,7 @@ const HomePage = {
                             <span class="text-[14px]">
                             ${formatter.format(product.price)}
                             </span>
-                        </div>`)};
+                        </div>`).join('')};
                     </div>
                 </section>
                 <div>
@@ -388,47 +388,9 @@ const HomePage = {
             `;
     },
     async afterRender() {
-        const $ = document.querySelectorAll.bind(document);
-        const products = (await getAll()).data;
-        const btnsPrevImage = $(".arrow-left");
-        const btnsNextImage = $(".arrow-right");
-        const ImageProduct = $(".ImageProduct");
-        const countImage = $(".count-image");
-        btnsNextImage.forEach((btn, indexBtn) => {
-            btn.addEventListener("click", () => {
-                var currentImage = Number(ImageProduct[indexBtn].dataset.index);
-                const lengthImage = products[indexBtn].images.length;
-                currentImage++;
-                if (currentImage > lengthImage - 1) {
-                    currentImage = 0;
-                    ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-                    ImageProduct[indexBtn].dataset.index = currentImage;
-                    countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-                } else {
-                    ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-                    ImageProduct[indexBtn].dataset.index = currentImage;
-                    countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-                }
-            });
-        });
-        btnsPrevImage.forEach((btn, indexBtn) => {
-            btn.addEventListener("click", () => {
-                var currentImage = Number(ImageProduct[indexBtn].dataset.index);
-                const lengthImage = products[indexBtn].images.length;
-                currentImage--;
-                if (currentImage < 0) {
-                    currentImage = lengthImage - 1;
-                    ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-                    ImageProduct[indexBtn].dataset.index = currentImage;
-                    countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-                } else {
-                    ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-                    ImageProduct[indexBtn].dataset.index = currentImage;
-                    countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-                }
-            });
-        });
+        nextImage((await getAll()).data)
         Footer.afterRender()
+        Header.afterRender()
     },
 };
 export default HomePage;

@@ -1,5 +1,5 @@
 import { getAll, remove } from "../../api/product";
-import { reRender } from "../../untils/until";
+import { formatter, reRender } from "../../untils/until";
 import NavAdmin from "./NavAdmin";
 /* eslint-disable indent */
 const Products = {
@@ -43,20 +43,20 @@ const Products = {
                                 <td class="py-4 text-center font-bold">
                                 ${index+1}
                                 </td>
-                                <td class="py-4 whitespace-nowrap">
+                                <td class="py-4 ">
                                     <div class="flex items-center">
                                         <div class="flex-shrink-0 h-10 w-10">
                                             <img class="h-10 w-10 rounded-full" src="${product.images[0]}" alt="">
                                         </div>
                                         <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                ${product.name}
+                                            <div class="text-sm font-medium text-gray-900 m-w-[200px]" style="-webkit-line-clamp: 1;-webkit-box-orient: vertical;overflow: hidden;display: -webkit-box">
+                                                <p title="${product.name}">${product.name}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </td>
-                                <td class="py-4 m-w-[200px]">
-                                    <div class="text-sm text-gray-500 ">
+                                <td class="py-4 m-w-[150px]">
+                                    <div class="text-sm text-gray-500 " style="-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;display: -webkit-box;">
                                         ${product.desc}
                                     </div>
                                 </td>
@@ -66,7 +66,7 @@ const Products = {
                                     </span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    ${product.price} $
+                                    ${formatter.format(product.price)}
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                     <a href="/admin/product/${product.id}/edit" class="text-indigo-600 hover:text-indigo-900 px-2">

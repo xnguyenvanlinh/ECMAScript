@@ -2,8 +2,9 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { add } from '../../api/product';
 import '../../firebase';
 import NavAdmin from './NavAdmin';
-import { $ } from '../../untils/until';
+import { $, reRender } from '../../untils/until';
 import { getAllCate } from '../../api/category';
+import Products from './Products';
 const AddProduct = {
         async render() {
             const categories = (await getAllCate()).data;
@@ -109,7 +110,7 @@ const AddProduct = {
                 .join('');
         };
         const formAdd = $('#form-add');
-        const file = document.querySelector('input[type="file"]');
+        const file = $('input[type="file"]');
         formAdd.addEventListener('submit', async(e) => {
             e.preventDefault();
             const images = [...file.files];
@@ -119,9 +120,7 @@ const AddProduct = {
                 const storageRef = ref(storage, `images/${image.name}`);
                 return new Promise((resolve) => {
                     uploadBytes(storageRef, image).then(async() => {
-                        const URLImage = await getDownloadURL(
-                            ref(storage, `images/${image.name}`)
-                        );
+                        const URLImage = await getDownloadURL(storageRef);
                         resolve(URLImage);
                     });
                 });
@@ -139,7 +138,8 @@ const AddProduct = {
                 images: imageCollection,
                 cateId:$('#cateId').value
             }).then(() => {
-                window.location.href = '/admin/products';
+                window.location.hash = '/#/admin/products';
+                reRender(Products,'#root')
             });
         });
     },
