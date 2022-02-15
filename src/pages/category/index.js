@@ -1,15 +1,14 @@
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import { formatter, $$ } from '../untils/until';
-import { getCate } from '../api/category';
-import { getAll } from '../api/product';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import { formatter, $$, nextImage } from '../../untils/until';
+import { getCate } from '../../api/category';
+import { listProductOfCate } from '../../api/product';
 
 /* eslint-disable indent */
 const Categories = {
         async render(id) {
             const category = (await getCate(id)).data;
-            console.log(typeof id)
-            const products = (await getAll()).data
+            const products = (await listProductOfCate(id)).data
             return /* html */ `
             ${Header.render()}
             <main>
@@ -254,7 +253,7 @@ const Categories = {
                                         </svg>
                                     </button>
                                     <a href="/products/${product.id}">
-                                        <img class="ImageProduct" src="${product.images[0]}" data-index="0" alt="">
+                                        <img class="ImageProduct" src="${product.images[0]}" alt="loading..." data-index="0" alt="">
                                     </a>
                                     <div class="absolute" style="top:65%;left:0px;">
                                         <p class="text-[11px] count-image bg-white px-2 py-1">
@@ -271,7 +270,7 @@ const Categories = {
                                     <span class="text-[14px]">
                                     ${formatter.format(product.price)}</span>
                                 </div>`
-								)};
+								).join('')};
                             </div>
                         </div>
                     </div>
@@ -280,47 +279,10 @@ const Categories = {
             ${Footer.render()}
             `;
 	},
-	async afterRender() {
+	async afterRender(id) {
 		Footer.afterRender();
-		const products = (await getAll()).data;
-		const btnsPrevImage = $$('.arrow-left');
-		const btnsNextImage = $$('.arrow-right');
-		const ImageProduct = $$('.ImageProduct');
-		const countImage = $$('.count-image');
-		btnsNextImage.forEach((btn, indexBtn) => {
-			btn.addEventListener('click', () => {
-				var currentImage = Number(ImageProduct[indexBtn].dataset.index);
-				const lengthImage = products[indexBtn].images.length;
-				currentImage++;
-				if (currentImage > lengthImage - 1) {
-					currentImage = 0;
-					ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-					ImageProduct[indexBtn].dataset.index = currentImage;
-					countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-				} else {
-					ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-					ImageProduct[indexBtn].dataset.index = currentImage;
-					countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-				}
-			});
-		});
-		btnsPrevImage.forEach((btn, indexBtn) => {
-			btn.addEventListener('click', () => {
-				var currentImage = Number(ImageProduct[indexBtn].dataset.index);
-				const lengthImage = products[indexBtn].images.length;
-				currentImage--;
-				if (currentImage < 0) {
-					currentImage = lengthImage - 1;
-					ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-					ImageProduct[indexBtn].dataset.index = currentImage;
-					countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-				} else {
-					ImageProduct[indexBtn].src = products[indexBtn].images[currentImage];
-					ImageProduct[indexBtn].dataset.index = currentImage;
-					countImage[indexBtn].innerHTML = `${currentImage + 1}/${lengthImage}`;
-				}
-			});
-		});
+        Header.afterRender()
+		nextImage((await listProductOfCate(id)).data)
 	},
 };
 export default Categories;

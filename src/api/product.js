@@ -19,3 +19,7 @@ export const remove = (id) => {
     const url = `/products/${id}`;
     return instance.delete(url);
 }
+export const listProductOfCate = (id) => {
+    const url = `/products?cateId=${id}`;
+    return instance.get(url);
+}
