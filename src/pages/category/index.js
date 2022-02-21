@@ -6,10 +6,10 @@ import { listProductOfCate } from '../../api/product';
 
 /* eslint-disable indent */
 const Categories = {
-        async render(id) {
-            const category = (await getCate(id)).data;
-            const products = (await listProductOfCate(id)).data
-            return /* html */ `
+    async render(id) {
+        const category = (await getCate(id)).data;
+        const products = (await listProductOfCate(id)).data
+        return /* html */ `
             ${Header.render()}
             <main>
                 <section>
@@ -18,9 +18,7 @@ const Categories = {
                             ${category.name}
                         </h2>
                         <p class="text-[#6f6f6f] text-[11px] mt-2">
-                            Trang Chủ / <span class="capitalize">${
-															category.name
-														}</span>
+                            Trang Chủ / <span class="capitalize">${category.name}</span>
                         </p>
                     </div>
                     <div class="w-[1200px] mx-auto flex justify-between">
@@ -270,7 +268,7 @@ const Categories = {
                                     <span class="text-[14px]">
                                     ${formatter.format(product.price)}</span>
                                 </div>`
-								).join('')};
+        ).join('')};
                             </div>
                         </div>
                     </div>
@@ -278,11 +276,11 @@ const Categories = {
             </main>
             ${Footer.render()}
             `;
-	},
-	async afterRender(id) {
-		Footer.afterRender();
+    },
+    async afterRender(id) {
+        Footer.afterRender();
         Header.afterRender()
-		nextImage((await listProductOfCate(id)).data)
-	},
+        nextImage((await listProductOfCate(id)).data)
+    },
 };
 export default Categories;

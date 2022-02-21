@@ -3,6 +3,8 @@ import Footer from '../components/Footer/Footer';
 import { formatter, $ } from '../untils/until';
 import {get } from '../api/product';
 import { addToCart } from '../untils/addtocart';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
 /* eslint-disable indent */
 const DetailProduct = {
     async render(id) {
@@ -153,7 +155,8 @@ const DetailProduct = {
         Footer.afterRender();
         $("#addToCart").addEventListener('click', async() => {
             const { data } = await get(id)
-            addToCart({...data, quantity: $("#number").value })
+            addToCart({...data, quantity: Number($("#number").value) })
+            toastr.success('Thêm vào giỏ hàng thành công');
         })
         const increase = $("#increase")
         const decrease = $("#decrease")

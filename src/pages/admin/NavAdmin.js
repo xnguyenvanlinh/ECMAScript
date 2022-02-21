@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 const NavAdmin = {
     render() {
         return /* html */ `
@@ -17,16 +16,16 @@ const NavAdmin = {
                         </button>
                         </div>
                         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                        <a href="/" class="flex-shrink-0 flex items-center">
+                        <a href="/#/" class="flex-shrink-0 flex items-center">
                             <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
                             <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow">
                         </a>
                         <div class="hidden sm:block sm:ml-6">
                             <div class="flex space-x-4">
-                            <a href="/admin/dashboard" class="menu-item text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Danh mục</a>
-                            <a href="/admin/products" class="menu-item bg-gray-900 text-white hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sản phẩm</a>
-                            <a href="/admin/users" class="menu-item text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Khách hàng</a>
-                            <a href="/admin/revenue" class="menu-item text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Doanh thu</a>
+                            <a href="/#/admin/category" class="menu-item text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Danh mục</a>
+                            <a href="/#/admin/products" class="menu-item text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium">Sản phẩm</a>
+                            <a href="/#/admin/users" class="menu-item text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Khách hàng</a>
+                            <a href="/#/admin/revenue" class="menu-item text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Doanh thu</a>
                             </div>
                         </div>
                         </div>

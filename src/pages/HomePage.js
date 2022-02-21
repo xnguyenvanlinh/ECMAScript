@@ -1,11 +1,10 @@
 import Header from '../components/Header/Header';
 import { formatter, nextImage } from '../untils/until';
 import Footer from '../components/Footer/Footer';
-import { getAll } from '../api/product';
+import { getAll, listProductOfCate } from '../api/product';
 /* eslint-disable indent */
 const HomePage = {
         async render() {
-            const products = (await getAll()).data
             return /* html */ `
             ${Header.render()}
             <main>
@@ -93,16 +92,16 @@ const HomePage = {
                             </a>
                         </div>
                         <div class="ml-3 grid grid-cols-2 gap-3">
-                            <a href="/category/1">
+                            <a href="/#/category/1">
                                 <img src="https://cdn3.dhht.vn/wp-content/uploads/2019/10/banner-dong-ho-nam.png" alt="">
                             </a>
-                            <a href="/category/2">
+                            <a href="/#/category/2">
                                 <img src="https://cdn3.dhht.vn/wp-content/uploads/2019/10/banner-dong-ho-nu.png" alt="">
                             </a>
-                            <a href="/category/3">
+                            <a href="/#/category/3">
                                 <img src="https://cdn3.dhht.vn/wp-content/uploads/2019/10/banner-dong-ho-doi.png" alt="">
                             </a>
-                            <a href="/category/4">
+                            <a href="/#/category/4">
                                 <img src="https://cdn3.dhht.vn/wp-content/uploads/2019/10/banner-dong-ho-tre-em.png" alt="">
                             </a>
                         </div>
@@ -124,7 +123,81 @@ const HomePage = {
                         </span>
                     </h2>
                     <div class="products flex flex-wrap justify-between">
-                    ${products.map((product) => /* html */ `
+                    ${((await listProductOfCate(1)).data).map((product) => /* html */ `
+                        <div class="product text-center pb-4 mb-[30px]">
+                            <button class="arrow-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="arrow-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                            <a href="/products/${product.id}">
+                                <img class="ImageProduct" 
+                                src="${product.images[0]}" data-index="0" alt="">
+                            </a>
+                            <div class="absolute" style="top:65%;left:0px;">
+                                <p class="text-[11px] count-image bg-white px-2 py-1">
+                                    1/${product.images.length}
+                                </p>
+                            </div>
+                            <a href="/products/${product.id}" class="hover:text-[#990000] cursor-pointer hover:underline">
+                                <p class="text-[14px] px-2">
+                                    ${product.name}
+                                </p>
+                            </a>
+                            <span class="text-[14px]">
+                            ${formatter.format(product.price)}
+                            </span>
+                        </div>`).join('')};
+                    </div>
+                    <h2 class="relative text-white font-normal title-cate my-5 text-center ">
+                        <span class="px-16 bg-white">
+                        <span class="bg-[#ff6600] px-4 py-1">ĐỒNG HỒ NỮ BÁN CHẠY</span>
+                        </span>
+                    </h2>
+                    <div class="products flex flex-wrap justify-between">
+                    ${((await listProductOfCate(2)).data).map((product) => /* html */ `
+                        <div class="product text-center pb-4 mb-[30px]">
+                            <button class="arrow-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <button class="arrow-right">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                            <a href="/products/${product.id}">
+                                <img class="ImageProduct" 
+                                src="${product.images[0]}" data-index="0" alt="">
+                            </a>
+                            <div class="absolute" style="top:65%;left:0px;">
+                                <p class="text-[11px] count-image bg-white px-2 py-1">
+                                    1/${product.images.length}
+                                </p>
+                            </div>
+                            <a href="/products/${product.id}" class="hover:text-[#990000] cursor-pointer hover:underline">
+                                <p class="text-[14px] px-2">
+                                    ${product.name}
+                                </p>
+                            </a>
+                            <span class="text-[14px]">
+                            ${formatter.format(product.price)}
+                            </span>
+                        </div>`).join('')};
+                    </div>
+                    <h2 class="relative text-white font-normal title-cate my-5 text-center ">
+                        <span class="px-16 bg-white">
+                        <span class="bg-[#ff6600] px-4 py-1">ĐỒNG HỒ CẶP ĐÔI BÁN CHẠY</span>
+                        </span>
+                    </h2>
+                    <div class="products flex flex-wrap justify-between">
+                    ${((await listProductOfCate(3)).data).map((product) => /* html */ `
                         <div class="product text-center pb-4 mb-[30px]">
                             <button class="arrow-left">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
