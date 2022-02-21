@@ -9,7 +9,7 @@ export const getCate = (id) => {
 }
 export const updateCate = (post) => {
     const url = `/categories/${post.id}`;
-    return instance.put(url, post);
+    return instance.patch(url, post);
 }
 export const addCate = (post) => {
     const url = `/categories/`;
