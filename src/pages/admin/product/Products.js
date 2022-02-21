@@ -1,6 +1,6 @@
-import { getAll, remove } from "../../api/product";
-import { formatter, reRender } from "../../untils/until";
-import NavAdmin from "./NavAdmin";
+import { getAll, remove } from "../../../api/product";
+import { formatter, reRender } from "../../../untils/until";
+import NavAdmin from "../NavAdmin";
 /* eslint-disable indent */
 const Products = {
         async render() {
@@ -17,7 +17,7 @@ const Products = {
                     <thead class="bg-gray-50">
                     <tr>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Sản phẩm
+                            STT
                         </th>
                         <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                             Sản phẩm
@@ -80,7 +80,7 @@ const Products = {
                         `).join("")}
                     </tbody>
                 </table>
-            </div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            </div>
         `;
     },
     afterRender() {

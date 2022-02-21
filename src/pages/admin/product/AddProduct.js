@@ -1,9 +1,9 @@
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import { add } from '../../api/product';
-import '../../firebase';
-import NavAdmin from './NavAdmin';
-import { $, reRender } from '../../untils/until';
-import { getAllCate } from '../../api/category';
+import { add } from '../../../api/product';
+import '../../../firebase';
+import NavAdmin from '../NavAdmin';
+import { $, reRender } from '../../../untils/until';
+import { getAllCate } from '../../../api/category';
 import Products from './Products';
 const AddProduct = {
         async render() {
@@ -136,7 +136,7 @@ const AddProduct = {
                 quantity: $('#quantity').value,
                 desc: $('#desc').value,
                 images: imageCollection,
-                cateId:$('#cateId').value
+                categoryId:$('#cateId').value
             }).then(() => {
                 window.location.hash = '/#/admin/products';
                 reRender(Products,'#root')

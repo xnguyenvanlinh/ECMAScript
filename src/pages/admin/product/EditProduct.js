@@ -1,5 +1,5 @@
-import {get, update } from "../../api/product";
-import NavAdmin from "./NavAdmin";
+import {get, update } from "../../../api/product";
+import NavAdmin from "../NavAdmin";
 
 const EditProduct = {
     async render(id) {
